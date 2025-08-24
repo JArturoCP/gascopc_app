@@ -8,7 +8,7 @@
 
     <div class="product-grid">
         <article class="product-card">
-            <img src="/img/Kit-4-DAHUA.png" alt="Producto 1">
+            <img src="../images/Kit-4-DAHUA.png" alt="Producto 1">
             <h3>Kit 4 camaras</h3>
             <p class="product-description">Kit de 4 camaras 2 mp</p>
             <p class="product-description">1 DVR con Disco 1 TB</p>
@@ -18,7 +18,7 @@
         </article>
 
         <article class="product-card">
-            <img src="/img/Kit-8-DAHUA.png" alt="Producto 2">
+            <img src="../images/Kit-8-DAHUA.png" alt="Producto 2">
             <h3>Kit 8 camaras</h3>
             <p class="product-description">Kit de 8 camaras de 2 mp</p>
             <p class="product-description">1 DVR con Disco 2 TB</p>
@@ -30,7 +30,7 @@
 
 
         <article class="product-card">
-            <img src="/img/Kit-16-DAHUA.jpg" alt="Producto 3">
+            <img src="../images/Kit-16-DAHUA.jpg" alt="Producto 3">
             <h3>Kit 16 camaras</h3>
             <p class="product-description">Kit de 16 camaras 2mp</p>
             <p class="product-description">1 DVR con Disco 4 TB</p>
@@ -54,7 +54,7 @@
     <h2 class="gps-title">Nuestros Servicios GPS</h2>
 
     <div class="gps-service">
-        <img src="/img/gps.jpeg" alt="Rastreo GPS">
+        <img src="../images/gps.jpeg" alt="Rastreo GPS">
         <div>
             <h3>Equipos de Rastreo GPS</h3>
             <p>Rastreo en plataforma libre, sin cargos extra ni rentas mensuales. Usted será el administrador total de su equipo, garantizando control y seguridad.</p>
@@ -63,7 +63,7 @@
     </div>
 
     <div class="gps-service">
-        <img src="/img/instalacion%20y%20venta.jpeg" alt="Instalación y Venta">
+        <img src="../images/instalacion%20y%20venta.jpeg" alt="Instalación y Venta">
         <div>
             <h3>Instalación y Venta de GPS</h3>
             <p>Equipos con el mejor precio y servicio, acompañados de una plataforma gratuita para el monitoreo de vehículos, camionetas, motocicletas o uso personal.</p>
@@ -72,7 +72,7 @@
     </div>
 
     <div class="gps-service">
-        <img src="/img/monitoreo%20de%20flotillas.jpeg" alt="Monitoreo de Flotillas">
+        <img src="../images/monitoreo%20de%20flotillas.jpeg" alt="Monitoreo de Flotillas">
         <div>
             <h3>Monitoreo de Flotillas</h3>
             <p>Servicio de monitoreo 24/7 para flotillas, garantizando seguridad y supervisión continua de sus unidades.</p>

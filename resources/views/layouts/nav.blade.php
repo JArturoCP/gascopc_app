@@ -23,8 +23,8 @@
                 <ul class="navbar-links">
                     <li><a href="/" class="navbar-link active">Inicio</a></li>
                     <li><a href="mi_tienda" class="navbar-link">Mi Tienda</a></li>
-                    <li><a href="nosotros.html" class="navbar-link ">Sobre Nosotros</a></li>
-                    <li><a href="servicios.html" class="navbar-link">Servicios</a></li>
+                    <li><a href="nosotros" class="navbar-link ">Sobre Nosotros</a></li>
+                    <li><a href="servicios" class="navbar-link">Servicios</a></li>
                 </ul>
             </div>
         </nav>

@@ -11,9 +11,9 @@ Route::get('mi_tienda', function () {
 });
 
 Route::get('nosotros', function () {
-    return view('tienda');
+    return view('nosotros');
 });
 
-Route::get('mi_tienda', function () {
-    return view('tienda');
+Route::get('servicios', function () {
+    return view('servicios');
 });
