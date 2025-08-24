@@ -15,9 +15,7 @@
             <div class="contenido-clientes">
                 <h2 class="titulo-clientes">Nuestros Clientes</h2>
                 <p class="texto-clientes">Estamos comprometidos con cada uno de nuestros clientes, en brindar un servicio de calidad dando soluciones inmediatas a sus necesidades.</p>
-                <!--
-                <a href="#contacto" class="boton">Contáctanos</a>
-                -->
+
             </div>
         </div>
     </section>

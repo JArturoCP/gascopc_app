@@ -2,17 +2,20 @@
 
 @section('content')
 
-<!-- Hero Section -->
-<section class="hero">
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Imagen como fondo absoluto -->
+        <div class="hero-bg">
+            <img src="../images/seguridad.jpg" alt="Fondo GASCOP"
+                 onerror="this.style.display='none'">
+        </div>
 
-    <img src="../images/seguridad.jpg" alt="GASCOP - Seguridad y protección civil" class="hero-fallback-img" style="display:none;">
-
-    <div class="hero-contenido">
-        <h1 class="titulo">GASCOPC</h1>
-        <h3>Comprometidos día a día con nuestra vocación.</h3>
-        <p>Grupo de asesores en seguridad, comunicación y protección civil.</p>
-    </div>
-</section>
+        <div class="hero-contenido">
+            <h1 class="titulo">GASCOPC</h1>
+            <h3>Comprometidos día a día con nuestra vocación.</h3>
+            <p>Grupo de asesores en seguridad, comunicación y protección civil.</p>
+        </div>
+    </section>
 
 <!-- Contenido Principal -->
 <div class="contenedor">
