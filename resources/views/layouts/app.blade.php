@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>@yield('title', 'Panel')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/js/app2.js'])
 </head>
 <body class="bg-light">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
