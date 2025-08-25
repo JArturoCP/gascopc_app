@@ -135,7 +135,7 @@ body {
     top: 8px;
 }
 
-/* 🔥 Corrección de animación */
+
 .navbar-toggle.active .toggle-icon {
     background-color: transparent; /* Oculta la barra central */
 }
