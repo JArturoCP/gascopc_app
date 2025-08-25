@@ -43,28 +43,28 @@
                 <div class="card shadow-sm border-0 mb-3">
                     <div class="card-body">
                         <h6 class="fw-bold text-muted">Mall</h6>
-                        <p class="fw-bold">Vía Vallejo</p>
+                        <p id="mallName" class="fw-bold">-</p>
                     </div>
                 </div>
 
                 <div class="card shadow-sm border-0 mb-3">
                     <div class="card-body">
                         <h6 class="fw-bold text-muted">PEPC</h6>
-                        <p><span class="badge bg-success">TRUE</span></p>
+                        <p id="pepcValue"><span class="badge bg-secondary">-</span></p>
                     </div>
                 </div>
 
                 <div class="card shadow-sm border-0 mb-3">
                     <div class="card-body">
                         <h6 class="fw-bold text-muted">Splinkers</h6>
-                        <p><span class="badge bg-danger">FALSE</span></p>
+                        <p id="splinkersValue"><span class="badge bg-secondary">-</span></p>
                     </div>
                 </div>
 
                 <div class="card shadow-sm border-0">
                     <div class="card-body">
                         <h6 class="fw-bold text-muted">VoBo PC</h6>
-                        <p><i class="bi bi-check-circle-fill text-success"></i> TRUE</p>
+                        <p id="voboPCValue">-</p>
                     </div>
                 </div>
             </div>
@@ -74,28 +74,28 @@
                 <div class="card shadow-sm border-0 mb-3">
                     <div class="card-body">
                         <h6 class="fw-bold text-muted">Fecha Primer Semestre Mantenimiento</h6>
-                        <p class="fw-bold">20 de febrero de 2025</p>
+                        <p id="primerMto" class="fw-bold">-</p>
                     </div>
                 </div>
 
                 <div class="card shadow-sm border-0 mb-3">
                     <div class="card-body">
                         <h6 class="fw-bold text-muted">Fecha Última Recarga Extintores</h6>
-                        <p class="fw-bold">Mayo 2025</p>
+                        <p id="ultimaRecarga" class="fw-bold">-</p>
                     </div>
                 </div>
 
                 <div class="card shadow-sm border-0 mb-3">
                     <div class="card-body">
                         <h6 class="fw-bold text-muted">Próxima Recarga Extintores</h6>
-                        <p class="fw-bold">250</p>
+                        <p id="proximaRecarga" class="fw-bold">-</p>
                     </div>
                 </div>
 
                 <div class="card shadow-sm border-0">
                     <div class="card-body">
                         <h6 class="fw-bold text-muted">Observaciones</h6>
-                        <p class="text-muted">Ok</p>
+                        <p id="observaciones" class="text-muted">-</p>
                     </div>
                 </div>
             </div>
@@ -105,31 +105,31 @@
                 <div class="card shadow-sm border-0 mb-3">
                     <div class="card-body">
                         <h6 class="fw-bold text-muted">Tipo de equipo</h6>
-                        <p class="fw-bold">Monitoreado Local</p>
+                        <p id="tipoEquipo" class="fw-bold">-</p>
                     </div>
                 </div>
 
                 <div class="card shadow-sm border-0 mb-3">
                     <div class="card-body">
                         <h6 class="fw-bold text-muted">Proveedor</h6>
-                        <p class="fw-bold">GASCOPC</p>
+                        <p id="proveedor" class="fw-bold">-</p>
                     </div>
                 </div>
 
                 <div class="card shadow-sm border-0 mb-3">
                     <div class="card-body">
                         <h6 class="fw-bold text-muted"># Smoke Detectors</h6>
-                        <p class="fw-bold">16</p>
+                        <p id="smokeDetectors" class="fw-bold">-</p>
                     </div>
                 </div>
 
                 <div class="card shadow-sm border-0">
                     <div class="card-body">
                         <h6 class="fw-bold text-muted">Documentos</h6>
-                        <a href="#" class="btn btn-sm btn-outline-primary w-100 mb-2"><i class="bi bi-file-earmark-pdf"></i> Dictamen Extintores 2025</a>
-                        <a href="#" class="btn btn-sm btn-outline-primary w-100 mb-2"><i class="bi bi-file-earmark-pdf"></i> Póliza de seguro</a>
-                        <a href="#" class="btn btn-sm btn-outline-primary w-100 mb-2"><i class="bi bi-file-earmark-pdf"></i> Carta Responsiva</a>
-                        <a href="#" class="btn btn-sm btn-outline-primary w-100"><i class="bi bi-file-earmark-pdf"></i> Certificación NFPA</a>
+                        <a id="dictamen" href="#" class="btn btn-sm btn-outline-primary w-100 mb-2"><i class="bi bi-file-earmark-pdf"></i> Dictamen Extintores 2025</a>
+                        <a id="poliza" href="#" class="btn btn-sm btn-outline-primary w-100 mb-2"><i class="bi bi-file-earmark-pdf"></i> Póliza de seguro</a>
+                        <a id="carta" href="#" class="btn btn-sm btn-outline-primary w-100 mb-2"><i class="bi bi-file-earmark-pdf"></i> Carta Responsiva</a>
+                        <a id="nfpa" href="#" class="btn btn-sm btn-outline-primary w-100"><i class="bi bi-file-earmark-pdf"></i> Certificación NFPA</a>
                     </div>
                 </div>
             </div>
@@ -138,31 +138,61 @@
 
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js"></script>
+
     <script>
-        // Aperturas
-        new Chart(document.getElementById('chartAperturas'), {
-            type: 'doughnut',
-            data: {
-                labels: ['Completado', 'Pendiente'],
-                datasets: [{
-                    data: [95, 5],
-                    backgroundColor: ['#28a745', '#dc3545']
-                }]
-            },
-            options: { plugins: { legend: { position: 'bottom' } } }
+        const sheetUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSb3Rzbu15SgsKOTqNo1r-jJzHYI8AX_5Xq478NV1cHffez6ombJ44IUXM9hY_ZR0Ths0vW4KFUrTK4/pub?gid=0&single=true&output=csv";
+
+        let sheetData = [];
+
+        // Cargar CSV al iniciar
+        Papa.parse(sheetUrl, {
+            download: true,
+            header: true,
+            complete: function(results) {
+                sheetData = results.data;
+                updateStore(document.getElementById("storeSelect").value);
+            }
         });
 
-        // Mantenimientos
-        new Chart(document.getElementById('chartMantenimientos'), {
-            type: 'doughnut',
-            data: {
-                labels: ['Primer Mto', 'Segundo Mto'],
-                datasets: [{
-                    data: [70, 30],
-                    backgroundColor: ['var(--primary-color)', '#198754']
-                }]
-            },
-            options: { plugins: { legend: { position: 'bottom' } } }
+        // Evento de cambio en el select
+        document.getElementById("storeSelect").addEventListener("change", function() {
+            updateStore(this.value);
         });
+
+        function updateStore(storeId) {
+            const row = sheetData.find(r => r.Store === storeId);
+            if (!row) return;
+
+            // Columna 1
+            document.getElementById("mallName").innerText = row.Mall || "--";
+            document.getElementById("pepcValue").innerHTML = row.PEPC === "TRUE"
+                ? '<span class="badge bg-success">TRUE</span>'
+                : '<span class="badge bg-danger">FALSE</span>';
+            document.getElementById("splinkersValue").innerHTML = row.Splinkers === "TRUE"
+                ? '<span class="badge bg-success">TRUE</span>'
+                : '<span class="badge bg-danger">FALSE</span>';
+            document.getElementById("voboPCValue").innerHTML = row["VoBo PC"] === "TRUE"
+                ? '<i class="bi bi-check-circle-fill text-success"></i> TRUE'
+                : '<i class="bi bi-x-circle-fill text-danger"></i> FALSE';
+
+            // Columna 2
+            document.getElementById("primerMto").innerText = row["Date first maintenance smoke detector"] || "--";
+            document.getElementById("ultimaRecarga").innerText = row["Fecha Ultima Recarga Extintores"] || "--";
+            document.getElementById("proximaRecarga").innerText = row["Proxima Recarga extintores"] || "--";
+            document.getElementById("observaciones").innerText = row.Observaciones || "--";
+
+            // Columna 3
+            document.getElementById("tipoEquipo").innerText = row["Tipo de equipo"] || "--";
+            document.getElementById("proveedor").innerText = row.Proveedor || "--";
+            document.getElementById("smokeDetectors").innerText = row["Smoke Detectors"] || "--";
+
+            // Documentos (asume que en el Sheet vienen URLs)
+            document.getElementById("dictamen").href = row["Factura Extintores"] || "#";
+            document.getElementById("poliza").href   = row["Poliza de seguro"] || "#";
+            document.getElementById("carta").href    = row["Carta Responsiva"] || "#";
+            document.getElementById("nfpa").href     = row["Certificación NFPA"] || "#";
+        }
     </script>
 @endsection

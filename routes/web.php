@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Sheet;
 
 Route::get('index', function () {
     return view('index');
@@ -42,3 +43,5 @@ Route::middleware('auth.simple')->group(function () {
 
     // Aquí adentro pon cualquier otra ruta del dashboard
 });
+
+Route::get('/store/{store}', [Sheet::class, 'getByStore']);
