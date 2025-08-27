@@ -179,13 +179,13 @@
 
             // Columna 2
             document.getElementById("primerMto").innerText = row["Date first maintenance smoke detector"] || "--";
-            document.getElementById("ultimaRecarga").innerText = row["Fecha Ultima Recarga Extintores"] || "--";
-            document.getElementById("proximaRecarga").innerText = row["Proxima Recarga extintores"] || "--";
+            document.getElementById("ultimaRecarga").innerText = row["Date second maintenance smoke detectors"] || "--";
+            document.getElementById("proximaRecarga").innerText = row["Proxima recarga"] || "--";
             document.getElementById("observaciones").innerText = row.Observaciones || "--";
 
             // Columna 3
             document.getElementById("tipoEquipo").innerText = row["Tipo de equipo"] || "--";
-            document.getElementById("proveedor").innerText = row.Proveedor || "--";
+            document.getElementById("Proveedor").innerText = row.Proveedor || "--";
             document.getElementById("smokeDetectors").innerText = row["Smoke Detectors"] || "--";
 
             // Documentos (asume que en el Sheet vienen URLs)
